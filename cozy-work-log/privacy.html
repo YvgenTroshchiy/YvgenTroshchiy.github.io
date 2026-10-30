@@ -42,28 +42,24 @@ prompt. None of it is transmitted to us or to anyone else, and it is deleted whe
 app.</p>
 
 <h2>Data collected automatically</h2>
-
-<h3>iPhone</h3>
-<p>The current iOS version sends no analytics and no crash reports.</p>
-
-<h3>Android</h3>
-<p>The Android version uses two Google services to understand how the app is used and to find
-crashes:</p>
+<p>The app uses two Google services, on iPhone and on Android alike, to understand how it is used
+and to find crashes:</p>
 <ul>
   <li><b>Firebase Analytics</b> collects anonymous usage events - for example, that the timer was
       started or stopped, that settings were opened or that the working hours were changed - together
       with the technical data Google attaches to them: a randomly generated app instance identifier,
       device model, operating system version, app version and approximate region derived from the IP
-      address. The advertising identifier is removed from the app and is not collected.</li>
+      address. The advertising identifier is not collected. Test builds (TestFlight and development
+      builds) send no analytics.</li>
   <li><b>Firebase Crashlytics</b> sends a crash report if the app crashes: the stack trace, the
       device model and operating system version, and the state of the app at the moment of the
       crash. Crash reports contain no personal data.</li>
 </ul>
 <p>Both services are provided by Google, and data is processed on Google's servers in accordance with
 the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; see also
-<a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a>. If crash
-reporting is added to the iOS version, it will be the same Firebase Crashlytics, and this page will
-be updated first.</p>
+<a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a>. None of
+this data is linked to your identity or used to track you across other companies' apps or
+websites.</p>
 
 <h2>Notifications and Live Activity</h2>
 <p>While the timer runs, the app shows it in a notification on Android and in a Live Activity on the
